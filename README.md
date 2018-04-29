@@ -17,7 +17,7 @@
         <img src="https://img.shields.io/github/forks/adamdenoon/nativescript-audio-player.svg" alt="forks">
     </a>
     <a href="https://github.com/adamdenoon/nativescript-audio-player/blob/master/LICENSE.md">
-        <img src="https://img.shields.io/github/license/nstudio/nativescript-audio-player.svg" alt="license">
+        <img src="https://img.shields.io/github/license/adamdenoon/nativescript-audio-player.svg" alt="license">
     </a>
     <a href="https://paypal.me/adamdenoon">
         <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="donate">
