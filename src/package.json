@@ -1,5 +1,5 @@
 {
-  "name": "nativescript-audio",
+  "name": "nativescript-audio-player",
   "version": "4.3.5",
   "description": "NativeScript plugin to record and play audio.",
   "main": "audio",
@@ -22,9 +22,9 @@
     "test.ios": "cd ../demo && tns platform remove ios && tns test ios --emulator",
     "test.ios.device": "cd ../demo && tns platform remove ios && tns test ios",
     "test.android": "cd ../demo && tns platform remove android && tns test android --justlaunch",
-    "preparedemo": "npm run build && cd ../demo && tns plugin remove nativescript-audio && tns plugin add ../src && tns install",
+    "preparedemo": "npm run build && cd ../demo && tns plugin remove nativescript-audio-player && tns plugin add ../src && tns install",
     "setup": "npm run build && cd ../demo && npm i",
-    "plugin.link": "npm link && cd ../demo && npm link nativescript-audio && cd ../src",
+    "plugin.link": "npm link && cd ../demo && npm link nativescript-audio-player && cd ../src",
     "plugin.tscwatch": "npm run tsc -- -w",
     "setupandinstall": "npm i && cd ../demo && npm i && cd ../src && npm run build && cd ../demo && tns plugin add ../src && cd ../src",
     "tslint": "tslint --config '../tslint.json' '*.ts' --exclude '**/node_modules/**'",
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bradmartin/nativescript-audio.git"
+    "url": "https://github.com/bradmartin/nativescript-audio-player.git"
   },
   "keywords": [
     "NativeScript",
@@ -132,10 +132,10 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/bradmartin/nativescript-audio/issues"
+    "url": "https://github.com/bradmartin/nativescript-audio-player/issues"
   },
   "license": "MIT",
-  "homepage": "https://github.com/bradmartin/nativescript-audio",
+  "homepage": "https://github.com/bradmartin/nativescript-audio-player",
   "readmeFilename": "README.md",
   "peerDependencies": {
     "tns-core-modules": "^3.0.0"

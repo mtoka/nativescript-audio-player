@@ -1,65 +1,48 @@
-<a align="center" href="https://www.npmjs.com/package/nativescript-audio">
+<a align="center" href="https://www.npmjs.com/package/nativescript-audio-player">
     <h3 align="center">NativeScript Audio</h3>
 </a>
 <h4 align="center">NativeScript plugin to play and record audio files for Android and iOS.</h4>
 
 <p align="center">
-    <a href="https://www.npmjs.com/package/nativescript-audio">
-        <img src="https://img.shields.io/npm/v/nativescript-audio.svg" alt="npm">
+    <a href="https://www.npmjs.com/package/nativescript-audio-player">
+        <img src="https://img.shields.io/npm/v/nativescript-audio-player.svg" alt="npm">
     </a>
-    <a href="https://www.npmjs.com/package/nativescript-audio">
-        <img src="https://img.shields.io/npm/dt/nativescript-audio.svg?label=npm%20downloads" alt="npm">
+    <a href="https://www.npmjs.com/package/nativescript-audio-player">
+        <img src="https://img.shields.io/npm/dt/nativescript-audio-player.svg?label=npm%20downloads" alt="npm">
     </a>
-    <a href="https://github.com/nstudio/nativescript-audio/stargazers">
-        <img src="https://img.shields.io/github/stars/nstudio/nativescript-audio.svg" alt="stars">
+    <a href="https://github.com/adamdenoon/nativescript-audio-player/stargazers">
+        <img src="https://img.shields.io/github/stars/adamdenoon/nativescript-audio-player.svg" alt="stars">
     </a>
-     <a href="https://github.com/nstudio/nativescript-audio/network">
-        <img src="https://img.shields.io/github/forks/nstudio/nativescript-audio.svg" alt="forks">
+     <a href="https://github.com/adamdenoon/nativescript-audio-player/network">
+        <img src="https://img.shields.io/github/forks/adamdenoon/nativescript-audio-player.svg" alt="forks">
     </a>
-    <a href="https://github.com/nstudio/nativescript-audio/blob/master/src/LICENSE.md">
-        <img src="https://img.shields.io/github/license/nstudio/nativescript-audio.svg" alt="license">
+    <a href="https://github.com/adamdenoon/nativescript-audio-player/blob/master/LICENSE.md">
+        <img src="https://img.shields.io/github/license/nstudio/nativescript-audio-player.svg" alt="license">
     </a>
-    <a href="https://paypal.me/bradwayne88">
+    <a href="https://paypal.me/adamdenoon">
         <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="donate">
     </a>
-    <a href="http://nstudio.io">
-      <img src="./screens/nstudio-banner.png" alt="nStudio banner">
-    </a>
-    <h5 align="center">Do you need assistance on your project or plugin? Contact the nStudio team anytime at <a href="mailto:team@nstudio.io">team@nstudio.io</a> to get up to speed with the best practices in mobile and web app development.
-    </h5>
 </p>
 
 ---
 
 ## Installation
 
-`tns plugin add nativescript-audio`
+`tns plugin add nativescript-audio-player`
 
 ---
 
-### Android Native Classes
+### Native Classes
 
-* [Player - android.media.MediaPlayer](http://developer.android.com/reference/android/media/MediaPlayer.html)
-* [Recorder - android.media.MediaRecorder](http://developer.android.com/reference/android/media/MediaRecorder.html)
-
-### iOS Native Classes
-
-* [Player - AVAudioPlayer](https://developer.apple.com/library/ios/documentation/AVFoundation/Reference/AVAudioPlayerClassReference/)
-* [Recorder - AVAudioRecorder](https://developer.apple.com/library/ios/documentation/AVFoundation/Reference/AVAudioRecorder_ClassReference/)
-
-Note: You will need to grant permissions on iOS to allow the device to access the microphone if you are using the recording function. If you don't, your app may crash on device and/or your app might be rejected during Apple's review routine. To do this, add this key to your `app/App_Resources/iOS/Info.plist` file:
-
-```xml
-<key>NSMicrophoneUsageDescription</key>
-<string>Recording Practice Sessions</string>
-```
+* [Android - android.media.MediaPlayer](http://developer.android.com/reference/android/media/MediaPlayer.html)
+* [iOS - AVAudioPlayer](https://developer.apple.com/library/ios/documentation/AVFoundation/Reference/AVAudioPlayerClassReference/)
 
 ## Usage
 
 ### TypeScript Example
 
 ```typescript
-import { TNSPlayer } from 'nativescript-audio';
+import { TNSPlayer } from 'nativescript-audio-player';
 
 export class YourClass {
   private _player: TNSPlayer;
@@ -109,7 +92,7 @@ export class YourClass {
 ### Javascript Example:
 
 ```javascript
-const audio = require('nativescript-audio');
+const audio = require('nativescript-audio-player');
 
 const player = new audio.TNSPlayer();
 const playerOptions = {
@@ -137,31 +120,6 @@ player
 ```
 
 ## API
-
-### Recorder
-
-#### TNSRecorder Methods
-
-| Method                                                      | Description                                                              |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------ |
-| _TNSRecorder.CAN_RECORD()_: `boolean` - **_static method_** | Determine if ready to record.                                            |
-| _start(options: AudioRecorderOptions)_: `Promise<void>`     | Start recording to file.                                                 |
-| _stop()_: `Promise<void>`                                   | Stop recording.                                                          |
-| _pause()_: `Promise<void>`                                  | Pause recording.                                                         |
-| _resume()_: `Promise<void>`                                 | Resume recording.                                                        |
-| _dispose()_: `Promise<void>`                                | Free up system resources when done with recorder.                        |
-| _getMeters(channel?: number)_: `number`                     | Returns the amplitude of the input.                                      |
-| _isRecording()_: `boolean` - **_iOS Only_**                 | Returns true if recorder is actively recording.                          |
-| _requestRecordPermission()_: `Promise<void>`                | _Android Only_ Resolves the promise is user grants the permission.       |
-| _hasRecordPermission()_: `boolean`                          | _Android Only_ Returns true if RECORD_AUDIO permission has been granted. |
-
-#### TNSRecorder Instance Properties
-
-| Property | Description                                                |
-| -------- | ---------------------------------------------------------- |
-| ios      | Get the native AVAudioRecorder class instance.             |
-| android  | Get the native MediaRecorder class instance.               |
-| debug    | Set true to enable debugging console logs (default false). |
 
 ### Player
 

@@ -1,6 +1,6 @@
 {
   "nativescript": {
-    "id": "org.nativescript.audio",
+    "id": "org.nativescript.audioplayer",
     "tns-android": {
       "version": "3.3.1"
     },
@@ -9,7 +9,7 @@
     }
   },
   "dependencies": {
-    "nativescript-audio": "file:../src",
+    "nativescript-audio-player": "file:../src",
     "nativescript-theme-core": "^1.0.4",
     "tns-core-modules": "^3.3.0"
   },

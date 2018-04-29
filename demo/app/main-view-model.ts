@@ -13,7 +13,7 @@ import {
   TNSPlayer,
   AudioPlayerOptions,
   AudioRecorderOptions
-} from "nativescript-audio";
+} from "nativescript-audio-player";
 
 declare const android;
 

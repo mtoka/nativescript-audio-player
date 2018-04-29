@@ -1,7 +1,7 @@
-<Page 
+<Page
   xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
   <Page.actionBar>
-    <ActionBar title="NativeScript Audio" backgroundColor="#3F51B5" color="#fff" />
+    <ActionBar title="NativeScript Audio Player" backgroundColor="#3F51B5" color="#fff" />
   </Page.actionBar>
   <TabView tabsBackgroundColor="#3F51B5" selectedColor="#FF4081">
     <TabView.items>
