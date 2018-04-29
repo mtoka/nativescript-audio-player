@@ -16,9 +16,7 @@
      <a href="https://github.com/adamdenoon/nativescript-audio-player/network">
         <img src="https://img.shields.io/github/forks/adamdenoon/nativescript-audio-player.svg" alt="forks">
     </a>
-    <a href="https://github.com/adamdenoon/nativescript-audio-player/blob/master/LICENSE.md">
-        <img src="https://img.shields.io/github/license/adamdenoon/nativescript-audio-player.svg" alt="license">
-    </a>
+    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/adamdenoon/nativescript-audio-player/blob/master/LICENSE.md)
     <a href="https://paypal.me/adamdenoon">
         <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="donate">
     </a>
