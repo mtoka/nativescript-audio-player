@@ -1,6 +1,6 @@
 import * as fs from 'tns-core-modules/file-system';
 import { isString } from 'tns-core-modules/utils/types';
-import { AudioPlayerOptions, AudioRecorderOptions } from './options';
+import { AudioPlayerOptions } from './options';
 
 export class TNSPlayerUtil {
   public static debug: boolean = false;
@@ -8,17 +8,7 @@ export class TNSPlayerUtil {
 
 export const TNS_Player_Log = (...args) => {
   if (TNSPlayerUtil.debug) {
-    console.log('NativeScript-Audio - TNSPlayer', args);
-  }
-};
-
-export class TNSRecorderUtil {
-  public static debug: boolean = false;
-}
-
-export const TNS_Recorder_Log = (...args) => {
-  if (TNSRecorderUtil.debug) {
-    console.log('NativeScript-Audio - TNSRecorder', args);
+    console.log('NativeScript-Audio-Player - TNSPlayer', args);
   }
 };
 
@@ -78,33 +68,6 @@ export interface TNSPlayerI {
    * current time
    */
   readonly currentTime: number;
-}
-
-export interface TNSRecordI {
-  /**
-   * Starts the native audio recording control.
-   */
-  start(options: AudioRecorderOptions): Promise<any>;
-
-  /**
-   * Pauses the native audio recording control.
-   */
-  pause(): Promise<any>;
-
-  /**
-   * Resumes the native audio recording control.
-   */
-  resume(): Promise<any>;
-
-  /**
-   * Stops the native audio recording control.
-   */
-  stop(): Promise<any>;
-
-  /**
-   * Releases resources from the recorder.
-   */
-  dispose(): Promise<any>;
 }
 
 /**

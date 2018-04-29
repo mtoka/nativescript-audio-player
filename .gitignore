@@ -8,7 +8,6 @@
 demo/lib
 demo/app/*.js
 demo/*.d.ts
-demo/platforms
 demo/node_modules
 demo/.vscode
 node_modules
@@ -17,7 +16,6 @@ node_modules
 
 
 # Demo application build files
-demo/platforms/*
 demo/lib/*
 
 src/*.js
@@ -47,7 +45,6 @@ seed-tests/seed-copy-new-git-repo/**/*.*
 demo/*.d.ts
 !demo/references.d.ts
 demo/lib
-demo/platforms
 node_modules
 publish/src
 publish/package

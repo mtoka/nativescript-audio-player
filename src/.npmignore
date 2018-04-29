@@ -1,5 +1,4 @@
 demo/
-screens/
 node_modules/
 tsconfig.json
 *.png
@@ -14,7 +13,6 @@ tsconfig.json
 .sln
 *.sln
 demo/
-screens/
 node_modules/
 
 *.ts

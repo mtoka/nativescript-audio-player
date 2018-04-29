@@ -79,7 +79,7 @@ export class TNSPlayer extends NSObject implements TNSPlayerI {
 
         if (output.match(/Receiver/)) {
           try {
-            audioSession.setCategoryError(AVAudioSessionCategoryPlayAndRecord);
+            audioSession.setCategoryError(AVAudioSessionCategoryPlayback);
             audioSession.overrideOutputAudioPortError(AVAudioSessionPortOverride.Speaker);
             audioSession.setActiveError(true);
             TNS_Player_Log('audioSession category set and active');
@@ -165,7 +165,7 @@ export class TNSPlayer extends NSObject implements TNSPlayerI {
 
             if (output.match(/Receiver/)) {
               try {
-                audioSession.setCategoryError(AVAudioSessionCategoryPlayAndRecord);
+                audioSession.setCategoryError(AVAudioSessionCategoryPlayback);
                 audioSession.overrideOutputAudioPortError(AVAudioSessionPortOverride.Speaker);
                 audioSession.setActiveError(true);
                 TNS_Player_Log('audioSession category set and active');

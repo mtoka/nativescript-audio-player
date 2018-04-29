@@ -1,7 +1,7 @@
 <a align="center" href="https://www.npmjs.com/package/nativescript-audio-player">
-    <h3 align="center">NativeScript Audio</h3>
+    <h3 align="center">NativeScript Audio Player</h3>
 </a>
-<h4 align="center">NativeScript plugin to play and record audio files for Android and iOS.</h4>
+<h4 align="center">NativeScript plugin to play audio files for Android and iOS.</h4>
 
 <p align="center">
     <a href="https://www.npmjs.com/package/nativescript-audio-player">

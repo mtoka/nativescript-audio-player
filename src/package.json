@@ -1,8 +1,8 @@
 {
   "name": "nativescript-audio-player",
-  "version": "4.3.5",
-  "description": "NativeScript plugin to record and play audio.",
-  "main": "audio",
+  "version": "1.0.0",
+  "description": "NativeScript plugin to play audio.",
+  "main": "audio-player",
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bradmartin/nativescript-audio-player.git"
+    "url": "https://github.com/adamdenoon/nativescript-audio-player.git"
   },
   "keywords": [
     "NativeScript",
@@ -52,17 +52,16 @@
     "Android",
     "iOS",
     "music",
-    "microphone",
-    "recorder",
     "audio",
     "nStudio",
     "bradmartin",
-    "nathanwalker"
+    "nathanwalker",
+    "adamdenoon"
   ],
   "author": {
-    "name": "Brad Martin",
-    "url": "https://github.com/bradmartin",
-    "email": "bmartin@nstudio.io"
+    "name": "Adam Denoon",
+    "url": "https://github.com/adamdenoon",
+    "email": "denoon@pm.me"
   },
   "contributors": [
     {
@@ -129,19 +128,20 @@
     {
       "name": "Richard Smith",
       "url": "https://github.com/DickSmith"
+    },
+    {
+      "name": "Brad Martin",
+      "url": "https://github.com/BradMartin"
     }
   ],
   "bugs": {
-    "url": "https://github.com/bradmartin/nativescript-audio-player/issues"
+    "url": "https://github.com/adamdenoon/nativescript-audio-player/issues"
   },
   "license": "MIT",
-  "homepage": "https://github.com/bradmartin/nativescript-audio-player",
+  "homepage": "https://github.com/adamdenoon/nativescript-audio-player",
   "readmeFilename": "README.md",
   "peerDependencies": {
     "tns-core-modules": "^3.0.0"
-  },
-  "dependencies": {
-    "nativescript-permissions": "~1.2.3"
   },
   "devDependencies": {
     "husky": "^0.14.3",
