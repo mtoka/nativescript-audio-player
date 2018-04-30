@@ -1,6 +1,6 @@
 {
   "name": "nativescript-audio-player",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NativeScript plugin to play audio.",
   "main": "audio-player",
   "typings": "index.d.ts",
@@ -141,7 +141,7 @@
   "homepage": "https://github.com/adamdenoon/nativescript-audio-player",
   "readmeFilename": "README.md",
   "peerDependencies": {
-    "tns-core-modules": "^3.0.0"
+    "tns-core-modules": "^4.0.0"
   },
   "devDependencies": {
     "husky": "^0.14.3",

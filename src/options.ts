@@ -29,6 +29,16 @@ export interface AudioPlayerOptions {
   metering?: boolean;
 
   /**
+   * Determine whether the audio stream should share the session. Default is false (play solo)
+   */
+  share?: boolean;
+
+  /**
+   * Determine whether other streams should duck. Depends on share, and default is false (mix)
+   */
+  duckOthers?: boolean;
+
+  /**
    * Gets or sets the callback when an error occurs with the audio player.
    * @returns {Object} An object containing the native values for the error callback.
    */
