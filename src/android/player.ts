@@ -17,8 +17,6 @@ export class TNSPlayer implements TNSPlayerI {
 
   constructor() {
     // request audio focus, this will setup the onAudioFocusChangeListener
-    this._mAudioFocusGranted = this._requestAudioFocus();
-    TNS_Player_Log('_mAudioFocusGranted', this._mAudioFocusGranted);
   }
 
   public get events() {
@@ -321,43 +319,6 @@ export class TNSPlayer implements TNSPlayerI {
         reject(ex);
       }
     });
-  }
-
-  /**
-   * Public helper method to change audio focus.
-   */
-  public requestAudioFocus(streamType: int, focusType: int): void {
-    let result = false;
-    if (!this._mAudioFocusGranted) {
-      const ctx = this._getAndroidContext();
-      const am = ctx.getSystemService(android.content.Context.AUDIO_SERVICE);
-      // Request audio focus for play back
-      const focusResult = am.requestAudioFocus(
-        this._mOnAudioFocusChangeListener,
-        android.media.AudioManager.STREAM_MUSIC,
-        android.media.AudioManager.AUDIOFOCUS_GAIN
-      );
-
-      if (focusResult === android.media.AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-        result = true;
-      } else {
-        TNS_Player_Log('Failed to get audio focus.');
-        result = false;
-      }
-    }
-    return result;
-  }
-
-  private _abandonAudioFocus(): void {
-    const ctx = this._getAndroidContext();
-    const am = ctx.getSystemService(android.content.Context.AUDIO_SERVICE);
-    const result = am.abandonAudioFocus(this._mOnAudioFocusChangeListener);
-    if (result === android.media.AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-      this._mAudioFocusGranted = false;
-    } else {
-      TNS_Player_Log('Failed to abandon audio focus.');
-    }
-    this._mOnAudioFocusChangeListener = null;
   }
 
   /**

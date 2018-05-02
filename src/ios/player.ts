@@ -79,6 +79,16 @@ export class TNSPlayer extends NSObject implements TNSPlayerI {
 
         if (output.match(/Receiver/)) {
           try {
+            /*audioSession.setActiveError(false);
+            if (options.share) {
+              if (options.duckOthers) {
+                audioSession.setCategoryWithOptionsError(AVAudioSessionCategoryPlayback, [AVAudioSessionCategoryOptionDuckOthers]);
+              } else {
+                audioSession.setCategoryWithOptionsError(AVAudioSessionCategoryPlayback, [AVAudioSessionCategoryOptionMixWithOthers]);
+              }
+            } else {
+              audioSession.setCategoryError(AVAudioSessionCategoryPlayback);
+            }*/
             audioSession.setCategoryError(AVAudioSessionCategoryPlayback);
             audioSession.overrideOutputAudioPortError(AVAudioSessionPortOverride.Speaker);
             audioSession.setActiveError(true);
@@ -165,6 +175,16 @@ export class TNSPlayer extends NSObject implements TNSPlayerI {
 
             if (output.match(/Receiver/)) {
               try {
+                /*audioSession.setActiveError(false);
+                if (options.share) {
+                  if (options.duckOthers) {
+                    audioSession.setCategoryWithOptionsError(AVAudioSessionCategoryPlayback, [AVAudioSessionCategoryOptionDuckOthers]);
+                  } else {
+                    audioSession.setCategoryWithOptionsError(AVAudioSessionCategoryPlayback, [AVAudioSessionCategoryOptionMixWithOthers]);
+                  }
+                } else {
+                  audioSession.setCategoryError(AVAudioSessionCategoryPlayback);
+                }*/
                 audioSession.setCategoryError(AVAudioSessionCategoryPlayback);
                 audioSession.overrideOutputAudioPortError(AVAudioSessionPortOverride.Speaker);
                 audioSession.setActiveError(true);
