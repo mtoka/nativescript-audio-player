@@ -1,8 +1,8 @@
 {
   "name": "nativescript-audio-player",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "NativeScript plugin to play audio.",
-  "main": "audio-player",
+  "main": "audio",
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
